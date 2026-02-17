@@ -1,131 +1,135 @@
-# 🌍 AQI Early Warning & Environmental Planning System
+# 🌍 Smart AQI Early Warning & Environmental Planning System
 
 ## 📌 Overview
 
-This project is a Machine Learning based Air Quality Index (AQI) Prediction System developed using Random Forest Regression and deployed using Streamlit.
+This project is a Machine Learning powered Air Quality Index (AQI) Prediction and Decision Support System developed using supervised regression models and deployed with Streamlit.
 
-The system not only predicts AQI based on pollutant levels but also provides:
+The system predicts AQI from pollutant concentrations and transforms predictions into:
 
 - 🚨 Early Warning Alerts  
-- 📊 Risk Classification  
+- 📊 Risk Level Classification  
 - 📈 Pollution Driver Analysis  
 - 🌿 Data-Driven Environmental Planning Recommendations  
 
-This transforms a basic ML model into a decision-support system for environmental monitoring.
+It goes beyond simple prediction and acts as an environmental intelligence dashboard.
 
 ---
 
 ## 🎯 Objectives
 
-- Predict AQI using key pollutant concentrations
-- Implement an early warning mechanism
-- Identify major pollution contributors
-- Support data-driven environmental planning
+- Predict AQI using major pollutant concentrations  
+- Compare multiple regression models  
+- Implement an early warning mechanism  
+- Identify key pollution contributors  
+- Support data-driven environmental policy decisions  
 
 ---
 
-## 🧠 Machine Learning Model
+## 🧠 Machine Learning Pipeline
 
-Algorithm: Random Forest Regressor  
+### Models Trained
 
-Input Features:
-- PM2.5
-- PM10
-- NO2
-- SO2
-- CO
-- O3
+- Linear Regression (Baseline)
+- Random Forest Regressor
+- XGBoost Regressor (Final Model)
 
-Output:
-- Predicted AQI Value
+### Final Model Selected
+
+**XGBoost Regressor**  
+Achieved highest R² score (~92%).
+
+### Input Features
+
+- PM2.5  
+- PM10  
+- NO  
+- NO2  
+- NOx  
+- CO  
+- O3  
+
+### Output
+
+- Predicted AQI Value  
+
+---
+
+## 📊 Model Performance
+
+| Model               | R² Score |
+|--------------------|----------|
+| Linear Regression  | ~0.85    |
+| Random Forest      | ~0.91    |
+| XGBoost            | ~0.92    |
+
+XGBoost performed best due to its ability to capture nonlinear pollutant interactions.
 
 ---
 
 ## 🚨 Early Warning Mechanism
 
-Based on predicted AQI values, the system classifies air quality into:
+Predicted AQI values are categorized into:
 
-- 🟢 Good
-- 🟡 Moderate
-- 🟠 Unhealthy for Sensitive Groups
-- 🔴 Unhealthy
-- 🟣 Hazardous
+- 🟢 Good  
+- 🟡 Satisfactory  
+- 🟠 Moderate  
+- 🔴 Poor  
+- 🟣 Very Poor  
+- ⚫ Severe  
 
-Each level triggers contextual health advisories and warning alerts.
+Each category triggers:
+
+- Health advisory notifications  
+- Risk visualization  
+- Environmental action recommendations  
 
 ---
 
 ## 📈 Data-Driven Environmental Planning
 
-The system uses Random Forest feature importance to:
+Using feature importance from tree-based models, the system:
 
-- Identify primary pollution drivers
-- Provide actionable policy recommendations
-- Support emission monitoring strategies
+- Identifies dominant pollution drivers  
+- Supports emission reduction strategies  
+- Assists smart city planning initiatives  
 
 ---
 
 ## 🛠 Tech Stack
 
-- Python
-- Scikit-learn
-- Streamlit
-- NumPy
-- Pandas
-- Joblib
-- Google Drive (Model Hosting)
+- Python  
+- Pandas  
+- NumPy  
+- Scikit-learn  
+- XGBoost  
+- Matplotlib  
+- Streamlit  
+- Joblib  
 
 ---
 
-## 📂 Project Structure
+---
 
-aqi-predictor/
-│
-├── app.py
-├── requirements.txt
-├── README.md
-└── (Model downloaded from Google Drive)
+## 📊 Evaluation Metrics
+
+- MAE (Mean Absolute Error)  
+- RMSE (Root Mean Squared Error)  
+- R² Score  
 
 ---
 
-## ▶️ Running Locally
+## 🌱 Future Enhancements
 
-1. Clone the repository
-2. Install dependencies:
-
-pip install -r requirements.txt
-
-3. Run the application:
-
-streamlit run app.py
-
----
-
-## 🌐 Deployment
-
-The application is deployed using Streamlit Cloud.
-The trained model is hosted on Google Drive and automatically downloaded during runtime.
-
----
-
-## 📊 Model Evaluation Metrics
-
-- MAE (Mean Absolute Error)
-- RMSE (Root Mean Squared Error)
-- R² Score
-
----
-
-## 💡 Future Enhancements
-
-- Time-series AQI forecasting
-- Real-time API integration
-- Geographic visualization
-- Automated alert notifications
-- Historical trend dashboard
+- Hyperparameter tuning  
+- SHAP explainability  
+- Time-series AQI forecasting  
+- Real-time API integration  
+- Geospatial AQI visualization  
 
 ---
 
 ## 👨‍💻 Author
 
-Developed as a college major project and portfolio-ready ML deployment system.
+Developed as a university major project and portfolio-ready Machine Learning deployment system focused on environmental intelligence and smart city applications.
+
+
