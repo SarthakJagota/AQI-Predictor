@@ -1,6 +1,7 @@
-streamlit==1.32.2
-scikit-learn
+streamlit
 numpy
 pandas
+matplotlib
+scikit-learn
+xgboost
 joblib
-gdown
